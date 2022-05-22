@@ -1,5 +1,5 @@
 # Site settings
-title: "Tom Taylor | versionxcontrol"
+title: "Tom Taylor | King Kundo"
 description: "A passionate software developer from the UK"
 
 # Build settings
@@ -11,7 +11,7 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Tom Taylor"
-resume_title:                   "Software Engineer ~ Head of R&D"
+resume_title:                   "Software Engineer ~ Head of Core Software"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "versionxcontrol@gmail.com"
@@ -45,7 +45,7 @@ resume_section_interests:       true
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_github_url:            "https://github.com/versionxcontrol"
+  resume_github_url:            "https://github.com/kingkundo"
   #resume_twitter_url:           ""
   #resume_dribbble_url:          ""
   resume_facebook_url:          "https://facebook.com/versionxcontrol"
