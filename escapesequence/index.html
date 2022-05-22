@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Escape Sequence</title>
+    <style>
+    /* a style sheet needs to be present for cursor hiding and custom cursors to work. */
+    </style>
+  </head>
+  <body style="background-color:black; display:flex; margin:0; padding:0;">
+    <canvas id="canvas" class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="720px" width="1280px"></canvas>
+    <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    dataUrl: "Release/webgl.data",
+    codeUrl: "Release/webgl.js",
+    memUrl: "Release/webgl.mem",
+    
+  };
+</script>
+<script src="Release/UnityLoader.js"></script>
+<script>  
+function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+  var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+  return { width: srcWidth*ratio, height: srcHeight*ratio };
+}
+
+
+const canvas = document.querySelector("canvas");
+canvas.style.display = "block";
+canvas.style.marginLeft = "auto";
+canvas.style.marginRight = "auto";
+
+const resize = () => {
+  canvas.width = calculateAspectRatioFit(1280, 720, document.body.clientWidth, window.innerHeight).width;
+  canvas.height = calculateAspectRatioFit(1280, 720, document.body.clientWidth, window.innerHeight).height;
+}
+
+resize()
+window.addEventListener('resize', resize)
+</script>
+  </body>
+</html>
